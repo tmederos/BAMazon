@@ -16,7 +16,7 @@ function showProducts() {
 
 };
 
-// This function askes the user to enter the Product and Quantity they want
+// This function asks the user to enter the Product and Quantity they want
 // to order. If the stock quantity is less then the amount requested, the order
 // will not be filled. Otherwise, the products table is updated to reduce the
 // stock amount.
@@ -48,7 +48,8 @@ inquirer.prompt([{
     mysql.placeOrder( answer.itemID, answer.quantity, newOrder );
   })
 }
-//
+// The new order function allows the user to enter another order or exit
+// the program.
 function newOrder(){
   inquirer.prompt([{
     type: "confirm",

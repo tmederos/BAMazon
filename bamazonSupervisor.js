@@ -1,7 +1,9 @@
 var mysql = require("./mySQL.js");
 var inquirer = require("inquirer");
 
-
+//
+// The supervisor action function has the two actions the supervisor can
+// perform. The user is prompted for information when entering a new dept.
 function supervisorActions(){
   inquirer.prompt([{
     name: "input",
@@ -33,6 +35,8 @@ function supervisorActions(){
   })
 };
 
+// The new action function allows the user to enter another action or exit
+// the program.
 function newAction(){
   inquirer.prompt([{
     type: "confirm",

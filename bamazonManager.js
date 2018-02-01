@@ -1,7 +1,9 @@
 var mysql = require("./mySQL.js");
 var inquirer = require("inquirer");
 //
-
+// The Manager Actions function contains all the actions the manager can
+// take. They are prompted to enter additional information to update
+// inventory or add a new product.
 function managerActions(){
   inquirer.prompt([{
     type: 'list',
@@ -73,13 +75,12 @@ function managerActions(){
         console.log('Product Added');
         console.log( "" );
       })
-
     }
-
   })
-
 }
 
+// The new action function allows the user to enter another action or exit
+// the program.
 function newAction(){
   inquirer.prompt([{
     type: "confirm",
