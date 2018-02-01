@@ -141,7 +141,11 @@ var MySQL = function(){
       console.log("                    Sales by Department                               ");
       console.log("----------------------------------------------------------------------");
         for (var i=0; i<res.length; i++){
-          table.push([res[i].department_id, res[i].department_name, res[i].overhead_cost, res[i].total_sales,  parseFloat(res[i].total_sales - res[i].overhead_cost).toFixed(2)]);
+          table.push([ res[i].department_id,
+                       res[i].department_name,
+                       parseFloat(res[i].overhead_cost).toFixed(2),
+                       parseFloat(res[i].total_sales).toFixed(2),
+                       parseFloat(res[i].total_sales - res[i].overhead_cost).toFixed(2)]);
 
         }
       console.log(table.toString());
