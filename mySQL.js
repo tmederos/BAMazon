@@ -76,7 +76,7 @@ var MySQL = function(){
     connection.query( "SELECT * FROM products WHERE item_id = ?",
       [itemID], function(err, res) {
       if (err) throw err;
-      if ( itemID > res[0].stock_quantity ){
+      if ( quantity > res[0].stock_quantity ){
         console.log( "" );
         console.log( "There is an insufficient quanity in stock to fill your order." );
         console.log( "We are unable to fill your order at this time." );
@@ -85,8 +85,12 @@ var MySQL = function(){
       else {
         //
         console.log( "" );
-        console.log( "Thank you for your ordering - " + res[0].product_name );
+        console.log("----------------------------------------------------------------------");
+        console.log( "" );
+        console.log( "Thank you for your ordering: \n" + res[0].product_name );
         console.log( "Your order total is: " +  '$' + parseFloat( res[0].price * quantity ).toFixed(2));
+        console.log( "" );
+        console.log("----------------------------------------------------------------------");
         console.log( "" );
         //
         // Update products table to reduce the stock quantity.
@@ -143,9 +147,9 @@ var MySQL = function(){
         for (var i=0; i<res.length; i++){
           table.push([ res[i].department_id,
                        res[i].department_name,
-                       parseFloat(res[i].overhead_cost).toFixed(2),
-                       parseFloat(res[i].total_sales).toFixed(2),
-                       parseFloat(res[i].total_sales - res[i].overhead_cost).toFixed(2)]);
+                       "$"+parseFloat(res[i].overhead_cost).toFixed(2),
+                       "$"+parseFloat(res[i].total_sales).toFixed(2),
+                       "$"+parseFloat(res[i].total_sales - res[i].overhead_cost).toFixed(2)]);
 
         }
       console.log(table.toString());
