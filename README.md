@@ -7,7 +7,7 @@ Link to demo video:
 
 ---
 # Screenshot
-![Screenshot](https://github.com/grstoltz/pissedtrest/blob/master/public/images/screen-shot.jpg)
+![Screenshot](https://github.com/tmederos/Bamazon/blob/master/screen-shot.jpg)
 
 ## Technologies used
 - Node.js
