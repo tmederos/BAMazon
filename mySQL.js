@@ -18,7 +18,7 @@ var Table = require('cli-table');
 
 var connection = mysql.createConnection({
   host: "localhost",
-  port: 3307,
+  port: 3308,
   user: "root",
   password: "root",
   database: "bamazonDB"
