@@ -5,6 +5,10 @@
 Link to demo video:
 * [Bamazon Demo] https://github.com/tmederos/Bamazon/blob/master/Bamazon_video.mp4
 
+---
+# Screenshot
+![Screenshot](https://github.com/grstoltz/pissedtrest/blob/master/public/images/screen-shot.jpg)
+
 ## Technologies used
 - Node.js
 - Inquire NPM Package (https://www.npmjs.com/package/inquirer)
