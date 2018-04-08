@@ -1,6 +1,7 @@
 # Bamazon
 
-####This is a Node.js terminal app that is an Amazon-like storefront where users place orders and deplete stock from the store's inventory. This app uses Javascript, Node.js and MySql.
+## Overview
+This is a Node.js terminal app that is an Amazon-like storefront where users place orders and deplete stock from the store's inventory. This app uses Javascript, Node.js and MySql.
 
 Link to demo video:
 * [Bamazon Demo] https://github.com/tmederos/Bamazon/blob/master/Bamazon_video.mp4
